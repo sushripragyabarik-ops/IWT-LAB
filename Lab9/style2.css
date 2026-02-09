@@ -1,0 +1,12 @@
+
+.goldbox
+{
+  background:gold;
+  color:black;
+}
+.blackbox
+{
+	background:black;
+	color:gold;
+	border:2px gold;
+}
