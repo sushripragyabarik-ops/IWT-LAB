@@ -1,12 +1,76 @@
 
 .goldbox
 {
-  background:gold;
+  background-color:gold;
   color:black;
+  border: 1px solid gold;
+  font-family:sans-serif;
+  padding:12px 20px;
+  font-weight:bold;
+  font-size:12px;
+  letter-spacing:1px;
 }
 .blackbox
 {
-	background:black;
-	color:gold;
-	border:2px gold;
+  background-color:black;
+  color:gold;
+  border: 1px solid gold;
+  font-family:sans-serif;
+  padding:12px 20px;
+  font-weight:bold;
+  font-size:12px;
+  letter-spacing:1px;
 }
+.graybox
+{
+	background-color:#191919;
+	color:gray;
+	padding:12px 12px;
+	font-family:sans-serif;
+}
+
+.sans
+{
+	font-family:sans-serif;
+}
+.serif
+{
+	font-family:serif;
+}
+.fancyfont
+{
+  font-family:'Playfair Display', serif;
+  font-weight:700;
+  color:#D4AF37;  
+  letter-spacing:0.3px;
+  line-height:2;
+}
+.parent1,
+.parent2 {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+}
+
+.stats {
+  display: flex;
+  gap: 80px;            
+  align-items: flex-start;
+  
+}
+
+.stat {
+  width: 200px;
+}
+
+.goldborder {
+  border-top: 3px solid;
+  border-image: linear-gradient(
+    to right,
+    transparent,
+    gold,
+    transparent
+  ) 1;
+}
+
+
