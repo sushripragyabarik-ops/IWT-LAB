@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>q13.3</title>
+	<script language="JavaScript">
+	  let n=parseInt(prompt("Enter number:")),rev=0,temp=n;
+	  while(temp!=0)
+	  {
+	    rev=rev*10+(temp%10);
+		temp=Math.floor(temp/10);
+	  }
+	  document.write("reverse:"+rev);
+	  if(rev==n)
+	  {
+	    document.write("<br>Its Palindrome");
+	  }
+	  else
+	  {
+	    document.write("<br>Its not Palindrome");
+	  }
+	</script>
+  </head>
+  <body>
+  </body>
+</html>

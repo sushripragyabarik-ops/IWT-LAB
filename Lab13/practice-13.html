@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>q13.1</title>
+	<script language="JavaScript">
+	  let a=new Array(10,20,30);
+	  let b=new Array(40,50,60);
+	  let c=a.concat(b);
+	  document.write(c);
+	  function rev(x)
+	  {
+	    let r=x.reverse();
+		return r;
+	  }
+	  let d=rev(c);
+	  document.write("<br>"+d);
+	  let e=d.sort();
+	  document.write("<br>"+e);
+	  d.pop();
+	  d.pop();
+	  d.push(90);
+	  document.write("<br>"+d);
+	  document.write("<br>"+d.join("*"));
+	  e.shift();
+	  e.shift();
+	  document.write("<br>"+e);
+	</script>
+  </head>
+</html>
