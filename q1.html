@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <title>Calculator</title>
+	<link rel="stylesheet" href="cal.css">
+	<script lang="javascript">
+	  let x="";
+	  function zero()
+	  {
+	    document.getElementById("res").innerText=x+"0";
+		x=x+"0";
+	  }
+	  function one()
+	  {
+	    document.getElementById("res").innerText=x+"1";
+		x=x+"1";
+	  }
+	  function two()
+	  {
+	    document.getElementById("res").innerText=x+"2";
+		x=x+"2";
+	  }
+	  function three()
+	  {
+	    document.getElementById("res").innerText=x+"3";
+		x=x+"3";
+	  }
+	  function four()
+	  {
+	    document.getElementById("res").innerText=x+"4";
+		x=x+"4";
+	  }
+	  function five()
+	  {
+	    document.getElementById("res").innerText=x+"5";
+		x=x+"5";
+	  }
+	  function six()
+	  {
+	    document.getElementById("res").innerText=x+"6";
+		x=x+"6";
+	  }
+	  function seven()
+	  {
+	    document.getElementById("res").innerText=x+"7";
+		x=x+"7";
+	  }
+	  function eight()
+	  {
+	    document.getElementById("res").innerText=x+"8";
+		x=x+"8";
+	  }
+	  function nine()
+	  {
+	    document.getElementById("res").innerText=x+"9";
+		x=x+"9";
+	  }
+	  function clr()
+	  {
+	    x="";
+	    document.getElementById("res").innerText=x;
+	  }
+	  function num()
+	  {
+	    let num=document.getElementById("res");
+		return num;
+	  }
+	  function add()
+	  {
+	    let n1=parseInt(num());
+		clr();
+		let n2=parseInt9num());
+		x=n1+n2;
+		document.getElementById("res").innerText=x;
+	  }
+	</script>
+  </head>
+  <body style="background:brown">
+    <center>
+	  <h1>Calculator</h1>
+	  <div class="cal">
+	     <div style="width:380px;height:60px;background:white;border:solid black 1px;margin:10px;margin-bottom:0px">
+		   <p id="res" style="vertical-align:center;font-size:22px;"></p>
+		 </div>
+		 <br>
+		 <div class="operbox">
+		 <div style="margin:10px;padding:10px;">
+		 <button id="9" class="oper" onclick="nine()">9</button>
+		 <button id="8" class="oper" onclick="eight()">8</button>
+		 <button id="7" class="oper" onclick="seven()">7</button>
+		 <button id="6" class="oper" onclick="six()">6</button>
+		 <button id="5" class="oper" onclick="five()">5</button>
+		 <button id="4" class="oper" onclick="four()">4</button>
+		 <button id="3" class="oper" onclick="three()">3</button>
+		 <button id="2" class="oper" onclick="two()">2</button>
+		 <button id="1" class="oper" onclick="one()">1</button>
+		 <button id="0" class="oper" onclick="zero()">0</button>
+		 </div>
+		 <div style="margin:10px;padding:10px;">
+	     <button id="add" class="oper" onclick="add()">+</button><br>
+	     <button id="sub" class="oper" onclick="sub()">-</button><br>
+	     <button id="mul" class="oper" onclick="mul()">x</button><br>
+	     <button id="div" class="oper" onclick="div()">/</button><br>
+	     <button id="mod" class="oper" onclick="mod()">%</button><br>
+	     <button id="clr" class="oper" style="width:70px;height:50px;background:orange" onclick="clr()">CLEAR</button>
+		 </div></div>
+	  </div>
+	</center>
+  </body>
+<html>
