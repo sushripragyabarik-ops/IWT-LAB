@@ -1,0 +1,31 @@
+<html> 
+<head> 
+    <title>12.8</title> 
+    <script lang="JavaScript"> 
+        let num = 153; 
+ 
+        function isArmstrong(num) 
+        { 
+            let sum = 0; 
+            let temp = num; 
+            let digits = num.toString().length; 
+ 
+            while(temp > 0) 
+            { 
+                let digit = temp % 10; 
+                sum = sum + Math.pow(digit, digits); 
+                temp = parseInt(temp / 10); 
+            } 
+ 
+            if(sum == num) 
+                document.write("Armstrong number"); 
+            else 
+                document.write("Not an Armstrong number"); 
+        } 
+ 
+        isArmstrong(num); 
+    </script> 
+</head> 
+<body bgcolor="yellow" text="green"> 
+</body> 
+</html> 

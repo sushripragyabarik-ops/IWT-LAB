@@ -1,0 +1,24 @@
+<html> 
+    <head> 
+        <title>q12.3</title> 
+        <script lang="JavaScript"> 
+            let num=0,rem,rev=0,temp=num; 
+            while(temp>0) 
+            { 
+                rem=temp%10; 
+                rev=rev+rem*10; 
+				temp/=10; 
+            } 
+            if (rev==num) 
+            { 
+                document.write("Palindrome"); 
+            } 
+            else 
+            { 
+                document.write("Not Palindrome"); 
+            } 
+ 
+        </script> 
+    </head> 
+    <body bgcolor="yellow" text="green"></body> 
+</html> 

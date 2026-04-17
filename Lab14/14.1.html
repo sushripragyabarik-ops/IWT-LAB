@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6</title>
+
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+        }
+
+        section { 
+            background: white; 
+            padding: 20px; 
+            margin-bottom: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        }
+
+        h2 { 
+            color: #333; 
+        }
+
+        .box { 
+            width: 100px; 
+            height: 100px; 
+            border: 2px solid #000; 
+            margin: 10px 0; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        }
+
+        button { 
+            cursor: pointer; 
+            padding: 5px 10px; 
+            margin: 5px; 
+        }
+
+        input, select, textarea { 
+            display: block; 
+            margin: 10px 0; 
+            padding: 8px; 
+            width: 100%; 
+            max-width: 300px; 
+        }
+
+        .radio-group { 
+            display: flex; 
+            gap: 10px; 
+            align-items: center; 
+        }
+
+        .radio-group input { 
+            width: auto; 
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Assignment 6</h1>
+
+<section>
+    <h3>Question 1: DOM Manipulation</h3>
+    <h2 id="q1-heading">Hello World</h2>
+    <button onclick="changeHeading()">Change Text</button>
+</section>
+
+<section>
+    <h3>Question 2: Toggle Visibility</h3>
+    <p id="q2-para">A paragraph is a coherent unit of writing that expresses a single idea or theme.</p>
+    <button id="q2-btn" onclick="togglePara()">Hide</button>
+</section>
+
+<section>
+    <h3>Question 3: Background Color Change</h3>
+    <div id="q3-div" class="box">Color Box</div>
+    <button onclick="changeDivColor('red')">Red</button>
+    <button onclick="changeDivColor('green')">Green</button>
+    <button onclick="changeDivColor('blue')">Blue</button>
+</section>
+
+<section>
+    <h3>Question 4: Simple Counter</h3>
+    <input type="number" id="counter-input" value="0" readonly>
+    <button onclick="updateCounter(1)">+</button>
+    <button onclick="updateCounter(-1)">-</button>
+</section>
+
+<section>
+    <h3>Question 5: Prime Checker</h3>
+    <input type="number" id="prime-input" placeholder="Enter a number">
+    <button onclick="checkPrime()">Check Prime</button>
+</section>
+
+<section>
+    <h3>Question 6: Currency Converter</h3>
+
+    <label>From:</label>
+    <select id="from-curr">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="INR">INR</option>
+        <option value="AUD">AUD</option>
+    </select>
+
+    <input type="number" id="amount" placeholder="Amount">
+
+    <label>To:</label>
+    <select id="to-curr">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="INR" selected>INR</option>
+        <option value="AUD">AUD</option>
+    </select>
+
+    <input type="text" id="result-curr" placeholder="Converted Amount" readonly>
+    <button onclick="convertCurrency()">Convert</button>
+</section>
+
+<section>
+    <h3>Question 7: Registration Form</h3>
+    <form id="regForm" onsubmit="return validateForm(event)">
+        <input type="text" id="reg-name" placeholder="Full Name">
+
+        <div class="radio-group">
+            <label><input type="radio" name="gender" value="Male">Male</label>
+            <label><input type="radio" name="gender" value="Female">Female</label>
+        </div>
+
+        <input type="text" id="reg-mobile" placeholder="Mobile (10 digits)">
+        <textarea id="reg-address" placeholder="Address"></textarea>
+
+        <select id="reg-country">
+            <option value="">Select Country</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+        </select>
+
+        <input type="text" id="reg-email" placeholder="Email">
+        <input type="password" id="reg-pass" placeholder="Password (6-15 chars)">
+        <button type="submit">Submit Registration</button>
+    </form>
+</section>
+
+<script>
+    function changeHeading() {
+        document.getElementById('q1-heading').innerText = "Welcome to DOM Manipulation";
+    }
+
+    function togglePara() {
+        let p = document.getElementById('q2-para');
+        let btn = document.getElementById('q2-btn');
+
+        if (p.style.display === "none" || p.style.display === "") {
+            p.style.display = "block";
+            btn.innerText = "Hide";
+        } else {
+            p.style.display = "none";
+            btn.innerText = "Show";
+        }
+    }
+
+    function changeDivColor(color) {
+        if (confirm("Change background color?")) {
+            document.getElementById('q3-div').style.backgroundColor = color;
+        }
+    }
+
+    function updateCounter(val) {
+        let input = document.getElementById('counter-input');
+        let current = parseInt(input.value) || 0;
+        let newVal = current + val;
+
+        if (newVal >= 0) {
+            input.value = newVal;
+        }
+    }
+
+    function checkPrime() {
+        let n = parseInt(document.getElementById('prime-input').value);
+
+        if (isNaN(n) || n <= 1) {
+            alert(n + " is not prime");
+            return;
+        }
+
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i === 0) {
+                alert(n + " is not prime");
+                return;
+            }
+        }
+
+        alert(n + " is prime");
+    }
+
+    const rates = {
+        USD: { EUR: 0.93, GBP: 0.82, INR: 82.74, AUD: 1.47 },
+        EUR: { USD: 1.08, GBP: 0.88, INR: 89.06, AUD: 1.58 },
+        GBP: { USD: 1.22, EUR: 1.14, INR: 101.5, AUD: 1.80 },
+        INR: { USD: 0.012, EUR: 0.011, GBP: 0.0098, AUD: 0.018 },
+        AUD: { USD: 0.68, EUR: 0.63, GBP: 0.55, INR: 55.87 }
+    };
+
+    function convertCurrency() {
+        let from = document.getElementById('from-curr').value;
+        let to = document.getElementById('to-curr').value;
+        let amt = document.getElementById('amount').value;
+        let resultBox = document.getElementById('result-curr');
+
+        if (!amt) {
+            alert("Enter amount");
+            return;
+        }
+
+        if (from === to) {
+            resultBox.value = amt;
+            return;
+        }
+
+        if (!rates[from] || !rates[from][to]) {
+            alert("Conversion not available");
+            return;
+        }
+
+        let converted = amt * rates[from][to];
+        resultBox.value = converted.toFixed(2);
+    }
+
+    function validateForm(event) {
+        let name = document.getElementById('reg-name').value.trim();
+        let gender = document.querySelector('input[name="gender"]:checked');
+        let mobile = document.getElementById('reg-mobile').value.trim();
+        let address = document.getElementById('reg-address').value.trim();
+        let country = document.getElementById('reg-country').value;
+        let email = document.getElementById('reg-email').value.trim();
+        let pass = document.getElementById('reg-pass').value.trim();
+
+        if (!name || !gender || !address || !country) {
+            alert("All fields required");
+            event.preventDefault();
+            return false;
+        }
+
+        if (!/^[0-9]{10}$/.test(mobile)) {
+            alert("Invalid mobile");
+            event.preventDefault();
+            return false;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            alert("Invalid email");
+            event.preventDefault();
+            return false;
+        }
+
+        if (pass.length < 6 || pass.length > 15) {
+            alert("Password must be 6-15 chars");
+            event.preventDefault();
+            return false;
+        }
+
+        alert("Registration Successful!");
+        return true;
+    }
+</script>
+
+</body>
+</html>

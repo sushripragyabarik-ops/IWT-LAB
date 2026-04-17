@@ -1,0 +1,25 @@
+<html> 
+	<head> 
+		<title>q12.11</title> 
+		<script lang="JavaScript"> 
+			let n=10; 
+			function fibonacci(n) 
+			{ 
+				let a=0,b=1,c; 
+				document.write("Fibonacci Series: <br>"); 
+				document.write(a + "<br>"); 
+				document.write(b + "<br>"); 
+				for(let i=2;i<n;i++) 
+				{ 
+					c=a+b; 
+					document.write(c+"<br>"); 
+					a=b; 
+					b=c; 
+				} 
+			} 
+			fibonacci(n); 
+		</script> 
+	</head> 
+	<body bgcolor="yellow" text="green"> 
+	</body> 
+</html>

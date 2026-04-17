@@ -1,0 +1,29 @@
+<html> 
+<head> 
+    <title>q12.9</title> 
+    <script lang="JavaScript"> 
+        let arr = [10, 23, 45, 66, 71, 90, 5]; 
+ 
+        function evenoddArray(arr) 
+        { 
+            let even = []; 
+            let odd = []; 
+ 
+            for(let i = 0; i < arr.length; i++) 
+            { 
+                if(arr[i] % 2 == 0) 
+                    even.push(arr[i]); 
+                else 
+                    odd.push(arr[i]); 
+            } 
+ 
+            document.write("Even numbers: " + even + "<br>"); 
+            document.write("Odd numbers: " + odd); 
+        } 
+ 
+        evenoddArray(arr); 
+    </script> 
+</head> 
+<body bgcolor="yellow" text="green"> 
+</body> 
+</html>

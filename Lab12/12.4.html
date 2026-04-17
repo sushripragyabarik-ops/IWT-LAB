@@ -1,0 +1,26 @@
+<html> 
+    <head> 
+        <title>q12.4</title> 
+        <script lang="JavaScript"> 
+            let a =new Array(3,2,4,1,5); 
+            let i,sum=0,s=a[0],l=a[0]; 
+            for (i=0;i<5;i++) 
+            { 
+                sum=sum+a[i]; 
+                if(a[i]<s) 
+                { 
+                    s=a[i]; 
+                } 
+                if(a[i]>l) 
+                { 
+                    l=a[i]; 
+                } 
+            } 
+            document.write("Sum ="+sum+"<br>"); 
+            document.write("Smallest = "+s+"<br>"); 
+            document.write("Largest = "+l+"<br>"); 
+            document.write("Average = "+sum/5); 
+        </script> 
+    </head> 
+    <body bgcolor="yellow" text="green"></body> 
+</html> 
