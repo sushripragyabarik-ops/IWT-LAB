@@ -1,51 +1,199 @@
-<html>
-  <head>
-    <title>Aurum Gold</title>
-	<link rel="stylesheet" href="style.css">
-	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  </head>
-  <body style="background:black;color:white;margin: 0px 40px 0px">
-    <div style="width:100%;padding:20px 0px 20px">
-	  <text style="color:white;font-size:25px;font-family:serif;word-spacing:4px"><span style="color:gold">AURUM</span> GOLD</text>
-	  <text style="margin-left:80px;color:gray;font-size:12px;font-family:sans-serif">SERVICES</text>
-	  <text style="margin-left:50px;color:gray;font-size:12px;font-family:sans-serif">WHY GOLD</text>
-	  <text style="margin-left:50px;color:gray;font-size:12px;font-family:sans-serif">PRODUCTS</text>
-	  <text style="margin-left:50px;color:gray;font-size:12px;font-family:sans-serif">REVIEWS</text>
-	  <text style="margin-left:50px;margin-right:80px;color:gray;font-size:12px;font-family:sans-serif">CONTACTS</text>
-	  <button class="blackbox" style="margin-right:10px;">SELL GOLD</button>
-	  <button class="goldbox">BUY GOLD</button>
-	</div>
-	<div class="graybox" style="margin:20px 0px;width:21%;">
-	  <text style="font-size:12px;margin:20px;">● MARKET OPEN - TRADING LIVE</text>
-	</div>
-	<div style="margin:20px">
-	  <div class="parent1">
-	    <text style="font-family:serif;font-size:60px;word-spacing:2px;line-height:1.4">Invest in <span style="color:gold;font-style:italic;">Gold</span><br>Secure Your<br>Future</text>
-		<p style="color:gray; line-height:1.6; font-size:14px;font-family:sans-serif">Experience premium gold trading with competitive rates,<br>
-		secure storage, and expert guidance. Join thousands of<br>
-		investors who trust us with their precious metals portfolio.
-		</p>
-		<button class="goldbox">EXPLORE PRODUCTS</button>
-		<button class="blackbox" style="margin-left:10px;">GET FREE CONSULATION</button>
-		<div class="stats">
-		<div style="margin:70px 0px 20px 0px;width:200px;height:100px" class="stat"><p style="font-size:14px;color:gray;font-weight:500;">
-		  <span style="color:gold;font-size:32px;font-weight:700;" class="fancyfont">$2.5B+<br>
-		  </span>ASSETS OVER MANAGEMENT</p>
-		</div>
-		<div style="margin:70px 0px 20px 0px;width:200px;height:100px" class="stat"><p style="font-size:14px;color:gray;font-weight:500;">
-		  <span style="color:gold;font-size:32px;font-weight:700;" class="fancyfont">50K+<br>
-		  </span>SATISFIED CLIENTS</p>
-		</div>
-		<div style="margin:70px 0px 20px 0px;width:200px;height:100px" class="stat"><p style="font-size:14px;color:gray;font-weight:500;">
-		  <span style="color:gold;font-size:32px;font-weight:700;" class="fancyfont">15+<br>
-		  </span>YEARS EXPERIENCE</p>
-		</div>
-		</div>
-	  </div>
-	  <div class="parent2 goldborder" style="background:#1A1A1A">
-	    <div style="color:gray;margin:30px;font-size:10px;word-spacing:2px" class="sans">GOLD SPOT PRICE(USD)</div>
-	 
-	  </div>
-	</div>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Aurum Gold - Premium Gold Investment</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container header-flex">
+            <div class="logo">AURUM GOLD</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">WHY GOLD</a></li>
+                    <li><a href="#">PRODUCTS</a></li>
+                    <li><a href="#">REVIEWS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-outline">SELL GOLD</a>
+                <a href="#" class="btn btn-gold">BUY GOLD</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-left">
+                <p class="market-status">MARKET OPEN TRADING LIVE</p>
+                <h1>Invest in <span class="gold">Gold</span><br>Secure Your Future</h1>
+                <p class="lead">
+                    Experience premium gold trading with competitive rates, secure storage, and expert guidance. 
+                    Join thousands of investors who trust us with their precious metals portfolio. [cite: 492, 493]
+                </p>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-gold">EXPLORE PRODUCTS</a>
+                    <a href="#" class="btn btn-outline">GET FREE CONSULTATION</a>
+                </div>
+            </div>
+            <div class="price-box">
+                <div class="price-header">
+                    <span>GOLD SPOT PRICE (USD/OZ)</span>
+                    <span class="live">LIVE</span>
+                </div>
+                <div class="big-price">$6,241.50</div>
+                <div class="metals-grid">
+                    <div class="metal-item">
+                        <div class="metal-name">SILVER (OZ)</div>
+                        <div class="metal-value">$31.42</div>
+                    </div>
+                    <div class="metal-item">
+                        <div class="metal-name">PLATINUM (OZ)</div>
+                        <div class="metal-value">$1,024.80</div>
+                    </div>
+                    <div class="metal-item">
+                        <div class="metal-name">PALLADIUM (OZ)</div>
+                        <div class="metal-value">$996.90</div>
+                    </div>
+                    <div class="metal-item">
+                        <div class="metal-name">RHODIUM (OZ)</div>
+                        <div class="metal-value">$4,364</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container stats-flex">
+            <div class="stat">
+                <div class="stat-number">$2.5B+</div>
+                <div class="stat-label">ASSETS UNDER MANAGEMENT</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">50K+</div>
+                <div class="stat-label">SATISFIED CLIENTS</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">YEARS EXPERIENCE</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services section-padding">
+        <div class="container">
+            <p class="section-label gold">OUR SERVICES</p>
+            <h2 class="section-title">Complete Gold Investment Solutions</h2>
+            <p class="section-subtitle">
+                From purchasing your first gold bars and coins from certified mints worldwide with competitive premiums, 
+                to managing a diversified precious metals portfolio, we provide end-to-end services tailored to your needs. [cite: 552, 553]
+            </p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon"></div>
+                    <h3>Buy Bullion</h3>
+                    <p>Purchase bullion and coins from certified mints worldwide with competitive premiums. [cite: 559, 560]</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"></div>
+                    <h3>Sell Your Gold</h3>
+                    <p>Get the best market rates for your gold items. Free appraisals, instant payments. [cite: 565, 566]</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"></div>
+                    <h3>Secure Storage</h3>
+                    <p>State-of-the-art facilities with 24/7 security, full insurance coverage. [cite: 575]</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"></div>
+                    <h3>Gold IRA</h3>
+                    <p>Diversify your retirement portfolio with precious metals. Easy setup & reporting. [cite: 579, 580]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-gold section-padding">
+        <div class="container">
+            <p class="section-label gold">WHY GOLD</p>
+            <h2 class="section-title large">The Timeless Standard<br>of Wealth Preservation</h2>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <div class="benefit-content">
+                        <div class="benefit-number">01</div>
+                        <h3>Inflation Hedge</h3>
+                        <p>Gold has historically maintained its purchasing power over centuries, protecting wealth against currency devaluation and inflation. [cite: 595, 596]</p>
+                    </div>
+                    <div class="benefit-image">
+                        <img src="g2.webp" alt="Inflation Hedge">
+                    </div>
+                </div>
+                <div class="benefit reverse">
+                    <div class="benefit-content">
+                        <div class="benefit-number">02</div>
+                        <h3>Portfolio Diversification</h3>
+                        <p>Gold's low correlation with stocks and bonds makes it an effective tool for reducing overall portfolio risk and volatility. [cite: 607, 608]</p>
+                    </div>
+                    <div class="benefit-image">
+                        <img src="g1.webp" alt="Diversification">
+                    </div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-content">
+                        <div class="benefit-number">03</div>
+                        <h3>Safe Haven Asset</h3>
+                        <p>During economic uncertainty and geopolitical tensions, gold serves as a reliable store of value. [cite: 620, 621]</p>
+                    </div>
+                    <div class="benefit-image">
+                        <img src="g3.webp" alt="Safe Haven">
+                    </div>
+                </div>
+                <div class="benefit reverse">
+                    <div class="benefit-content">
+                        <div class="benefit-number">04</div>
+                        <h3>Tangible Ownership</h3>
+                        <p>Unlike digital assets, physical gold provides true ownership without reliance on electronic systems. [cite: 631, 632]</p>
+                    </div>
+                    <div class="benefit-image">
+                        <img src="g1.webp" alt="Tangible Ownership">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products section-padding">
+        <div class="container">
+            <p class="section-label gold">OUR PRODUCTS</p>
+            <h2 class="section-title">Premium Gold Selection</h2>
+            <p class="section-subtitle">Explore our curated collection of gold bars and coins from the world's most prestigious mints. [cite: 647, 648]</p>
+            <div class="product-tabs">
+                <button class="tab active">GOLD COINS</button>
+                <button class="tab">GOLD BARS</button>
+                <button class="tab">SILVER</button>
+                <button class="tab">PLATINUM</button>
+            </div>
+            <div class="products-grid">
+                <img src="g1.webp" alt="Gold Coins">
+                <img src="g2.webp" alt="Gold Bars">
+                <img src="g3.webp" alt="Silver">
+                <img src="g4.webp" alt="Platinum">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Aurum Gold. All rights reserved. [cite: 668]</p>
+        </div>
+    </footer>
+</body>
 </html>
